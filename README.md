@@ -36,7 +36,7 @@ The Arduino Uno acts as the main controller of the system. It receives time and 
 ![Block Diagram](./images/block_diagram.png)
 
 ### Schematic
-![Schematic](./images/schematic.png)
+![Schematic](AlarmSchema.jpg)
 
 ### Breadboard Prototype
 ![Breadboard Prototype](./images/breadboard_prototype.jpg)
