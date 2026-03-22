@@ -28,7 +28,7 @@ The Embedded Remote-Controlled Alarm Clock System is an embedded systems project
 The Arduino Uno acts as the main controller of the system. It receives time and date data from the RTC module, receives commands from the IR receiver, and controls the LCD, buzzer, and RGB LED based on the programmed alarm logic.
 
 ## Project Documentation
-- [Project PDF Report](./docs/project_report.pdf)
+- [Project PDF Report](AlarmClockSystem.pdf)
 
 ## Images
 
