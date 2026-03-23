@@ -33,7 +33,7 @@ The Arduino Uno acts as the main controller of the system. It receives time and 
 ## Images
 
 ### Block Diagram
-![Block Diagram](./images/block_diagram.png)
+![Block Diagram](alarm_clock_block_diagram.png)
 
 ### Schematic
 ![Schematic](AlarmSchema.jpg)
