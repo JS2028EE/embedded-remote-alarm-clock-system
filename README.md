@@ -39,7 +39,7 @@ The Arduino Uno acts as the main controller of the system. It receives time and 
 ![Schematic](AlarmSchema.jpg)
 
 ### Breadboard Prototype
-![Breadboard Prototype](./images/breadboard_prototype.jpg)
+![Breadboard Prototype](breadboard block.png)
 
 ## Code
 The source code for this project is stored in the `code/` folder.
