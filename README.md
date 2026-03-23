@@ -38,9 +38,6 @@ The Arduino Uno acts as the main controller of the system. It receives time and 
 ### Schematic
 ![Schematic](AlarmSchema.jpg)
 
-### TinkerCAD Schematic
-![TinkerCAD Schematic](tinkerCADschema_Alarm.pdf)
-
 ### Breadboard Prototype
 ![Breadboard Prototype](breadboardblock.png)
 
