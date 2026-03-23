@@ -42,7 +42,7 @@ The Arduino Uno acts as the main controller of the system. It receives time and 
 ![Breadboard Protoype Without DS1307 RTC](breadboardblock.png)
 
 ## Code
-The main Arduino source file for this project is [`alarm_clock.ino`](./code/alarm_clock.ino).
+The main Arduino source file for this project is [`alarm_clock.ino`](./code/alarm_clock.ino), located in the `code` folder. This file contains the embedded logic for time display, alarm control, remote input handling, and output activation.
 
 ## Future Improvements
 - Printed circuit board version
