@@ -53,3 +53,25 @@ The main Arduino source file for this project is [`alarm_clock.ino`](./code/alar
 
 ## Author
 Jhóstin Sanchez
+
+## Build and wiring reference
+
+Install **LiquidCrystal**, **IRremote** (the version using `IRremote.hpp`), and **RTClib**. Open the sketch in Arduino IDE, accept creation of a matching sketch folder if requested, select Arduino Uno, and upload. Serial diagnostics use **9600 baud**; remote button codes are defined near the top of the sketch and may need adjustment for your remote.
+
+| Function | Uno pins |
+|---|---|
+| LCD RS/E/D4/D5/D6/D7 | D7/D6/D5/D4/D3/D2 |
+| Buzzer | D8 |
+| RGB red/green/blue | D9/D10/D11 |
+| IR receiver | D12 |
+| DS1307 SDA/SCL | A4/A5 |
+
+The prototype photo without a DS1307 demonstrates the UI build, not RTC timekeeping. RTC functions require a connected, initialized clock. The firmware generates a variable-frequency square wave; a passive piezo is appropriate for audible frequency changes, while an active buzzer produces its own tone.
+
+## Maintenance verification
+
+Daily alarm suppression now includes the calendar date: the same minute cannot retrigger on one day, but the next day's scheduled alarm can. On hardware, test a matching minute, silence it, confirm no same-minute repeat, then advance the RTC to the next day and confirm another alarm. Existing prototype reports are retained; this code review does not establish a new physical test result.
+
+## License
+
+Original source and documentation are available under the [MIT License](LICENSE). External dependencies, libraries, and third-party assets retain their respective licenses. Licensing does not imply that the prototype is calibrated, certified, or physically validated after later code changes.

@@ -96,6 +96,7 @@ int editPosition = 0;
 int lastAlarmMinuteTriggered = -1;
 int lastAlarmHourTriggered = -1;
 bool lastAlarmPMTriggered = false;
+uint32_t lastAlarmDateTriggered = 0;
 
 // software buzzer square wave
 bool buzzerPinState = false;
@@ -448,17 +449,20 @@ void checkRealAlarm() {
   if (!systemOn || !rtcReady || !alarmEnabled || alarmActive) return;
 
   DateTime now = rtc.now();
+  uint32_t currentDate = (uint32_t)now.year() * 10000UL + now.month() * 100UL + now.day();
   int currentHour12 = getDisplayHour12(now);
   bool currentPM = getCurrentPM(now);
 
   if (currentHour12 == alarmHour &&
       now.minute() == alarmMinute &&
       currentPM == alarmPM &&
-      !(lastAlarmHourTriggered == currentHour12 &&
+      !(lastAlarmDateTriggered == currentDate &&
+        lastAlarmHourTriggered == currentHour12 &&
         lastAlarmMinuteTriggered == now.minute() &&
         lastAlarmPMTriggered == currentPM)) {
 
     alarmActive = true;
+    lastAlarmDateTriggered = currentDate;
     lastAlarmHourTriggered = currentHour12;
     lastAlarmMinuteTriggered = now.minute();
     lastAlarmPMTriggered = currentPM;
